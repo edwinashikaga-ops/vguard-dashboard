@@ -1,4 +1,5 @@
-export const translations = {
+const fs = require('fs');
+const content = `export const translations = {
   id: {
     nav: {
       beranda: "Beranda",
@@ -155,3 +156,7 @@ export const translations = {
     }
   }
 };
+`;
+fs.writeFileSync('lib/translations.ts', content, 'utf8');
+console.log('DONE!');
+console.log(fs.readFileSync('lib/translations.ts','utf8').split('\n')[0]);

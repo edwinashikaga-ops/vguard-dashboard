@@ -1,14 +1,6 @@
-export const translations = {
+const fs = require('fs');
+const content = `export const translations = {
   id: {
-    nav: {
-      beranda: "Beranda",
-      produk: "Produk",
-      roi: "Kalkulator ROI",
-      harga: "Harga",
-      referral: "Referral",
-      investor: "Investor",
-      kontak: "Kontak"
-     },
     beranda: {
       badge: "Keamanan Siber Terpercaya",
       title1: "Lindungi Bisnis Anda",
@@ -77,15 +69,7 @@ export const translations = {
       ctaWA: "Konsultasi via WhatsApp"
     }
   },
-  nav: {
-    beranda: "Home",
-    produk: "Products",
-    roi: "ROI Calculator",
-    harga: "Pricing",
-    referral: "Referral",
-    investor: "Investor",
-    kontak: "Contact"
-   },
+  en: {
     beranda: {
       badge: "Trusted Cyber Security",
       title1: "Protect Your Business",
@@ -155,3 +139,7 @@ export const translations = {
     }
   }
 };
+`;
+fs.writeFileSync('lib/translations.ts', content, 'utf8');
+console.log('DONE!');
+console.log(fs.readFileSync('lib/translations.ts','utf8').split('\n')[0]);
