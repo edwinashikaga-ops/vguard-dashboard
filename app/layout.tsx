@@ -1,78 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import type { Metadata } from "next";
+import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
+import { Syne, Space_Mono } from "next/font/google";
 
-/* ===== ROOT VARIABLES ===== */
-:root {
-  --navy: #020617;
-  --card: #070f1f;
-  --primary: #00e5ff;
-  --accent: #7b2fff;
-  --gold: #ffd700;
-}
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+});
 
-/* ===== BASE RESET ===== */
-html,
-body {
-  height: 100%;
-}
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-space-mono",
+});
 
-body {
-  background-color: var(--navy);
-  color: white;
-  font-family: var(--font-syne), sans-serif;
-}
+export const metadata: Metadata = {
+  title: "V-Guard | Cybersecurity Dashboard",
+  description: "Protect your business with real-time cybersecurity monitoring",
+};
 
-/* ===== CUSTOM UTILITIES ===== */
-
-/* Grid background (seperti di design kamu) */
-.bg-grid {
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    );
-  background-size: 40px 40px;
-}
-
-/* Glow cyan effect */
-.glow-cyan {
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
-}
-
-/* Card style */
-.card {
-  background-color: var(--card);
-  border: 1px solid rgba(0, 229, 255, 0.1);
-  border-radius: 12px;
-}
-
-/* Gradient text */
-.text-gradient {
-  background: linear-gradient(90deg, #00e5ff, #7b2fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Button primary */
-.btn-primary {
-  background: linear-gradient(90deg, #00e5ff, #7b2fff);
-  color: black;
-  font-weight: 600;
-  padding: 10px 18px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.btn-primary:hover {
-  opacity: 0.85;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="id" className={`${syne.variable} ${spaceMono.variable}`}>
+      <body className="bg-navy text-white min-h-screen">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
+    </html>
+  );
 }
