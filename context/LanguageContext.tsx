@@ -1,14 +1,14 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
-import { translations } from '@/lib/translations'; // 🔥 tambah ini
+import { translations } from '@/lib/translations';
 import type { Lang } from '@/lib/translations';
 
 interface LanguageContextValue {
   lang: Lang;
   setLang: (lang: Lang) => void;
   toggleLang: () => void;
-  t: typeof translations['id']; // 🔥 tambah ini
+  t: typeof translations['id']; // 🔥 WAJIB ADA
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
@@ -24,7 +24,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     lang,
     setLang,
     toggleLang,
-    t: translations[lang], // 🔥 ini yang bikin Navbar jalan
+    t: translations[lang], // 🔥 WAJIB ADA
   };
 
   return (
@@ -37,7 +37,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 export function useLanguage(): LanguageContextValue {
   const ctx = useContext(LanguageContext);
   if (!ctx) {
-    throw new Error('useLanguage must be used inside <LanguageProvider>');
+    throw new Error('useLanguage must be used inside LanguageProvider');
   }
   return ctx;
 }
