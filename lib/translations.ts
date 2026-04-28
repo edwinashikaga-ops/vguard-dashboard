@@ -25,7 +25,7 @@ export const translations = {
       subtitle: "Solusi keamanan untuk setiap skala bisnis",
       paymentTitle: "Informasi Pembayaran",
       paymentDesc: "Pembayaran dapat dilakukan via transfer bank setelah konfirmasi.",
-      bank: "BCA • Mandiri • BNI • BRI",
+      bank: "BCA - Mandiri - BNI - BRI",
       faqTitle: "Pertanyaan Umum",
       faqs: [
         { q: "Apakah ada masa percobaan?", a: "Ya, kami menyediakan demo gratis selama 14 hari." },
@@ -41,6 +41,31 @@ export const translations = {
       aktivasi: "Aktivasi",
       ctaPreOrder: "Pre-Order Sekarang",
       cta: "Mulai Sekarang"
+    },
+    roi: {
+      badge: "Kalkulator ROI",
+      title: "Hitung Potensi Penghematan",
+      subtitle: "Lihat berapa besar kerugian yang bisa dicegah dengan VGuard.",
+      inputTitle: "Parameter Bisnis Anda",
+      labels: {
+        kasir: "Jumlah Kasir",
+        transaksi: "Transaksi per Hari",
+        nilai: "Nilai Rata-rata Transaksi",
+        fraud: "Estimasi % Fraud/Kebocoran",
+        paket: "Pilih Paket VGuard"
+      },
+      disclaimer: "Estimasi berdasarkan data industri retail Indonesia. Hasil aktual dapat bervariasi tergantung kondisi bisnis.",
+      resultTitle: "Estimasi Hasil",
+      metrics: {
+        kerugianBulan: "Estimasi Kerugian/Bulan",
+        kerugianTahun: "Estimasi Kerugian/Tahun",
+        biayaVGuard: "Biaya VGuard/Bulan",
+        penghematan: "Potensi Penghematan/Tahun",
+        roi: "ROI",
+        payback: "Payback Period"
+      },
+      bulan: "bulan",
+      ctaWA: "Konsultasi via WhatsApp"
     }
   },
   en: {
@@ -69,7 +94,7 @@ export const translations = {
       subtitle: "Security solutions for every business scale",
       paymentTitle: "Payment Information",
       paymentDesc: "Payment can be made via bank transfer after confirmation.",
-      bank: "BCA • Mandiri • BNI • BRI",
+      bank: "BCA - Mandiri - BNI - BRI",
       faqTitle: "Frequently Asked Questions",
       faqs: [
         { q: "Is there a trial period?", a: "Yes, we provide a free demo for 14 days." },
@@ -85,6 +110,31 @@ export const translations = {
       aktivasi: "Activation",
       ctaPreOrder: "Pre-Order Now",
       cta: "Get Started"
+    },
+    roi: {
+      badge: "ROI Calculator",
+      title: "Calculate Your Savings",
+      subtitle: "See how much loss VGuard can prevent for your business.",
+      inputTitle: "Your Business Parameters",
+      labels: {
+        kasir: "Number of Cashiers",
+        transaksi: "Transactions per Day",
+        nilai: "Average Transaction Value",
+        fraud: "Estimated % Fraud/Leakage",
+        paket: "Choose VGuard Package"
+      },
+      disclaimer: "Estimates based on Indonesian retail industry data. Actual results may vary depending on business conditions.",
+      resultTitle: "Estimated Results",
+      metrics: {
+        kerugianBulan: "Estimated Loss/Month",
+        kerugianTahun: "Estimated Loss/Year",
+        biayaVGuard: "VGuard Cost/Month",
+        penghematan: "Potential Savings/Year",
+        roi: "ROI",
+        payback: "Payback Period"
+      },
+      bulan: "months",
+      ctaWA: "Consult via WhatsApp"
     }
   }
 };
