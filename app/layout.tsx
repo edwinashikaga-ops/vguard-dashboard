@@ -1,29 +1,35 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { Syne, Space_Mono } from "next/font/google";
 
-const inter = Inter({
-  variable: "--font-geist-sans",
+// Font setup (sesuai Tailwind config kamu)
+const syne = Syne({
   subsets: ["latin"],
+  variable: "--font-syne",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-space-mono",
 });
 
 export const metadata: Metadata = {
-  title: "VGuard - Cybersecurity Dashboard",
-  description: "VGuard cybersecurity solution",
+  title: "V-Guard | Cybersecurity Dashboard",
+  description: "Protect your business with real-time cybersecurity monitoring",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html
       lang="id"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${syne.variable} ${spaceMono.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full bg-navy text-white antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>
