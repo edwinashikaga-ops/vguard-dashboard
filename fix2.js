@@ -10,7 +10,7 @@ const t = {
       referral: "Referral",
       investor: "Investor",
       kontak: "Kontak",
-      adminPortal: "Admin Portal" // Menambahkan Admin Portal
+      adminPortal: "Admin Portal"
     },
     beranda: {
       badge: "Keamanan Siber Terpercaya",
@@ -89,7 +89,7 @@ const t = {
       referral: "Referral",
       investor: "Investor",
       kontak: "Contact",
-      adminPortal: "Admin Portal" // Menambahkan Admin Portal
+      adminPortal: "Admin Portal"
     },
     beranda: {
       badge: "Trusted Cyber Security",
@@ -161,5 +161,7 @@ const t = {
   }
 };
 
-fs.writeFileSync('lib/translations.ts', 'export const translations = ' + JSON.stringify(t, null, 2) + ';', 'utf8');
-console.log('DONE: Admin Portal added to Nav');
+// Baris Sakti yang diperbarui sesuai permintaan Bapak:
+fs.writeFileSync('lib/translations.ts', 'export const translations = ' + JSON.stringify(t, null, 2) + ';\nexport type Lang = keyof typeof translations;', 'utf8');
+
+console.log('DONE: Translations updated with Lang type.');

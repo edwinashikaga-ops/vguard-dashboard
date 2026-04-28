@@ -220,3 +220,4 @@ export const translations = {
     }
   }
 };
+export type Lang = keyof typeof translations;
