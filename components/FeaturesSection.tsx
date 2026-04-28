@@ -10,32 +10,18 @@ type Props = {
 export default function FeaturesSection({ activeTab }: Props) {
   const { t } = useLanguage();
 
-  const productFeatures = [
-    {
-      title: t.features.ai,
-      desc: t.features.ai_desc,
-    },
-    {
-      title: t.features.network,
-      desc: t.features.network_desc,
-    },
-    {
-      title: t.features.behavior,
-      desc: t.features.behavior_desc,
-    },
-  ];
-
   const renderContent = () => {
     switch (activeTab) {
       case "produk":
         return (
           <div className="grid md:grid-cols-3 gap-6">
-            {productFeatures.map((f, i) => (
+            {t.beranda.features.map((f: any, i: number) => (
               <div
                 key={i}
                 className="p-6 bg-card rounded-xl border border-cyan-500/10 card-hover"
               >
-                <h3 className="text-lg font-semibold text-cyan-400 mb-2">
+                <div className="text-2xl mb-2">{f.icon}</div>
+                <h3 className="text-lg font-semibold text-cyan-400">
                   {f.title}
                 </h3>
                 <p className="text-white/70 text-sm">{f.desc}</p>
@@ -50,36 +36,34 @@ export default function FeaturesSection({ activeTab }: Props) {
             <h2 className="text-2xl text-cyan-400 mb-2">
               {t.roi.title}
             </h2>
-            <p className="text-white/70">{t.roi.desc}</p>
+            <p className="text-white/70">{t.roi.subtitle}</p>
           </div>
         );
 
-      case "portal":
+      case "harga":
         return (
           <div className="text-center">
             <h2 className="text-2xl text-cyan-400 mb-2">
-              {t.portal.title}
+              {t.harga.title}
             </h2>
-            <p className="text-white/70">{t.portal.desc}</p>
+            <p className="text-white/70">{t.harga.subtitle}</p>
           </div>
         );
 
       case "admin":
         return (
-          <div className="text-center">
-            <h2 className="text-red-400 text-xl">
-              Admin Dashboard Access
-            </h2>
+          <div className="text-center text-red-400">
+            🔒 Admin Portal Access
           </div>
         );
 
       default:
         return (
           <div className="text-center">
-            <h2 className="text-3xl text-cyan-400 mb-4">
-              {t.hero.title}
-            </h2>
-            <p className="text-white/70">{t.hero.subtitle}</p>
+            <h1 className="text-4xl font-bold mb-2">
+              {t.beranda.title1} <br /> {t.beranda.title2}
+            </h1>
+            <p className="text-white/70">{t.beranda.subtitle}</p>
           </div>
         );
     }
