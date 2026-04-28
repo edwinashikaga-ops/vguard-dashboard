@@ -60,7 +60,7 @@ export default function Navbar({ activeTab, setActiveTab }: Props) {
 
           {/* CTA */}
           <a
-            href="https://wa.me/628123456789"
+            href="https://wa.me/6282122190885"
             target="_blank"
             className="bg-cyan-400 text-black px-4 py-2 rounded-md font-semibold hover:opacity-80"
           >
@@ -94,7 +94,7 @@ export default function Navbar({ activeTab, setActiveTab }: Props) {
           ))}
 
           <a
-            href="https://wa.me/628123456789"
+            href="https://wa.me/6282122190885"
             target="_blank"
             className="bg-cyan-400 text-black px-4 py-2 rounded-md text-center"
           >
