@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="id"
       className={`${syne.variable} ${spaceMono.variable} h-full`}
     >
-      <body className="bg-navy text-white min-h-screen antialiased">
+      <body className="min-h-screen bg-navy text-white antialiased font-sans">
         <LanguageProvider>
           {children}
         </LanguageProvider>
@@ -38,4 +38,3 @@ export default function RootLayout({
     </html>
   );
 }
-
