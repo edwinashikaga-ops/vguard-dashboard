@@ -11,22 +11,26 @@ type Props = {
 
 export default function Navbar({ activeTab, setActiveTab }: Props) {
   const { t } = useLanguage();
-
   const [isOpen, setIsOpen] = useState(false);
 
-  // 🔥 SIMULASI ROLE (ubah di sini untuk testing)
+  // 🔥 ROLE SIMULATION (ubah di sini)
   const userRole: "admin" | "guest" = "guest";
-  // ubah jadi "admin" untuk menampilkan menu Admin Access
+  // ganti ke "admin" untuk tampilkan Admin Portal
 
   const navItems = [
-    { key: "home", label: t.nav.home },
-    { key: "produk", label: t.nav.product },
+    { key: "beranda", label: t.nav.beranda },
+    { key: "produk", label: "Produk" }, // belum ada di translations → manual dulu
     { key: "roi", label: t.nav.roi },
-    { key: "portal", label: t.nav.portal },
+    { key: "harga", label: t.nav.harga },
+    { key: "referral", label: t.nav.referral },
+    { key: "investor", label: t.nav.investor },
   ];
 
   if (userRole === "admin") {
-    navItems.push({ key: "admin", label: t.nav.admin });
+    navItems.push({
+      key: "admin",
+      label: t.nav.adminPortal,
+    });
   }
 
   return (
@@ -38,9 +42,8 @@ export default function Navbar({ activeTab, setActiveTab }: Props) {
           V-GUARD
         </div>
 
-        {/* DESKTOP MENU */}
+        {/* DESKTOP */}
         <div className="hidden md:flex items-center gap-6">
-
           {navItems.map((item) => (
             <button
               key={item.key}
@@ -59,13 +62,13 @@ export default function Navbar({ activeTab, setActiveTab }: Props) {
           <a
             href="https://wa.me/628123456789"
             target="_blank"
-            className="bg-cyan-400 text-black px-4 py-2 rounded-md font-semibold hover:opacity-80 transition"
+            className="bg-cyan-400 text-black px-4 py-2 rounded-md font-semibold hover:opacity-80"
           >
-            {t.nav.cs}
+            CS 24/7
           </a>
         </div>
 
-        {/* MOBILE BUTTON */}
+        {/* MOBILE BTN */}
         <button
           className="md:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
@@ -76,7 +79,7 @@ export default function Navbar({ activeTab, setActiveTab }: Props) {
 
       {/* MOBILE MENU */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col gap-3 bg-[#020617]/90 backdrop-blur-xl">
+        <div className="md:hidden px-4 pb-4 flex flex-col gap-3 bg-[#020617]/90">
           {navItems.map((item) => (
             <button
               key={item.key}
@@ -95,7 +98,7 @@ export default function Navbar({ activeTab, setActiveTab }: Props) {
             target="_blank"
             className="bg-cyan-400 text-black px-4 py-2 rounded-md text-center"
           >
-            {t.nav.cs}
+            CS 24/7
           </a>
         </div>
       )}
