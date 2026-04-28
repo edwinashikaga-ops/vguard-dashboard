@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
+import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '@/lib/translations';
 import { HARGA_MAP, PaketKey, fmtRupiah, WA_BASE } from '@/lib/constants';
 
