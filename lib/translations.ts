@@ -1,58 +1,36 @@
 export const translations = {
   id: {
+    nav: {
+      beranda: "Beranda",
+      harga: "Harga",
+      roi: "Kalkulator ROI",
+      referral: "Referral",
+      investor: "Investor",
+      adminPortal: "Admin Portal"
+    },
     beranda: {
       badge: 'Keamanan Siber Terpercaya',
       title1: 'Lindungi Bisnis Anda',
       title2: 'Dari Ancaman Digital',
-      subtitle:
-        'VGuard hadir sebagai solusi keamanan siber terdepan untuk UMKM dan enterprise Indonesia. Monitoring 24/7, deteksi ancaman realtime, dan respon cepat oleh tim ahli kami.',
+      subtitle: 'VGuard hadir sebagai solusi keamanan siber terdepan untuk UMKM dan enterprise Indonesia.',
       cta: 'Lihat Paket Harga',
       ctaDemo: 'Coba Kalkulator ROI',
       statsValue: ['500+', '99.9%', '< 5 Menit', '24/7'],
       statsLabel: ['Klien Aktif', 'Uptime Layanan', 'Waktu Respon', 'Monitoring'],
       featTitle: 'Semua yang Anda Butuhkan',
       features: [
-        {
-          icon: '🛡️',
-          title: 'Deteksi Ancaman Realtime',
-          desc: 'Sistem AI kami memantau jaringan Anda setiap detik dan mendeteksi ancaman sebelum berdampak.',
-        },
-        {
-          icon: '📊',
-          title: 'Dashboard Terpusat',
-          desc: 'Pantau seluruh aset digital Anda dari satu dashboard yang intuitif dan mudah digunakan.',
-        },
-        {
-          icon: '⚡',
-          title: 'Respon Insiden Cepat',
-          desc: 'Tim ahli kami siap merespon insiden keamanan dalam hitungan menit, bukan jam.',
-        },
-        {
-          icon: '📋',
-          title: 'Laporan Komprehensif',
-          desc: 'Dapatkan laporan keamanan berkala yang jelas dan dapat langsung ditindaklanjuti.',
-        },
-        {
-          icon: '🔒',
-          title: 'Kepatuhan Regulasi',
-          desc: 'Kami memastikan sistem Anda memenuhi standar keamanan dan regulasi yang berlaku di Indonesia.',
-        },
-        {
-          icon: '🤝',
-          title: 'Dukungan Dedicated',
-          desc: 'Tim support kami siap membantu Anda kapan saja melalui berbagai saluran komunikasi.',
-        },
+        { icon: '🛡️', title: 'Deteksi Ancaman Realtime', desc: 'AI memantau jaringan Anda setiap detik.' },
+        { icon: '📊', title: 'Dashboard Terpusat', desc: 'Pantau aset dari satu dashboard intuitif.' },
+        { icon: '⚡', title: 'Respon Insiden Cepat', desc: 'Tim ahli merespon dalam hitungan menit.' }
       ],
       cta2Title: 'Siap Memulai?',
-      cta2Subtitle:
-        'Konsultasikan kebutuhan keamanan siber bisnis Anda secara gratis dengan tim ahli kami.',
+      cta2Subtitle: 'Konsultasikan kebutuhan keamanan siber bisnis Anda secara gratis.',
       cta2Btn: 'Konsultasi Gratis',
     },
     harga: {
       badge: 'Pricing',
       title: 'Pilih Paket yang Tepat',
-      subtitle:
-        'Dari personal hingga enterprise, kami punya solusi keamanan siber yang sesuai dengan kebutuhan dan anggaran Anda.',
+      subtitle: 'Solusi keamanan siber yang sesuai dengan anggaran Anda.',
       perBulan: '/bulan',
       aktivasi: 'Biaya aktivasi',
       popular: 'POPULER',
@@ -63,33 +41,17 @@ export const translations = {
       ctaPreOrder: 'Pre-Order Sekarang',
       cta: 'Pilih Paket',
       paymentTitle: 'Informasi Pembayaran',
-      paymentDesc: 'Pembayaran dapat dilakukan melalui transfer bank atau dompet digital.',
+      paymentDesc: 'Pembayaran via transfer bank atau dompet digital.',
       bank: 'BCA · Mandiri · BNI · OVO · GoPay',
       faqTitle: 'Pertanyaan Umum',
       faqs: [
-        {
-          q: 'Apakah ada masa percobaan gratis?',
-          a: 'Ya, kami menyediakan masa percobaan 7 hari gratis untuk semua paket berbayar tanpa perlu kartu kredit.',
-        },
-        {
-          q: 'Bisa ganti paket kapan saja?',
-          a: 'Tentu! Anda bisa upgrade atau downgrade paket kapan saja. Perubahan akan berlaku di periode billing berikutnya.',
-        },
-        {
-          q: 'Bagaimana proses onboarding-nya?',
-          a: 'Setelah pembayaran dikonfirmasi, tim kami akan menghubungi Anda dalam 1×24 jam untuk proses instalasi dan konfigurasi.',
-        },
-        {
-          q: 'Apakah data saya aman?',
-          a: 'Keamanan data Anda adalah prioritas utama kami. Semua data dienkripsi dan disimpan di server yang aman di Indonesia.',
-        },
+        { q: 'Apakah ada masa percobaan gratis?', a: 'Ya, 7 hari gratis tanpa kartu kredit.' }
       ],
     },
-    // INI BAGIAN YANG TADI HILANG
     roi: {
       badge: "Kalkulator ROI",
       title: "Hitung Potensi Penghematan Anda",
-      subtitle: "Simulasi kerugian akibat fraud kasir vs investasi keamanan VGuard.",
+      subtitle: "Simulasi kerugian fraud vs investasi VGuard.",
       inputTitle: "Parameter Bisnis",
       resultTitle: "Hasil Analisis Estimasi",
       labels: {
@@ -114,62 +76,40 @@ export const translations = {
   },
 
   en: {
+    nav: {
+      beranda: "Home",
+      harga: "Pricing",
+      roi: "ROI Calculator",
+      referral: "Referral",
+      investor: "Investor",
+      adminPortal: "Admin Portal"
+    },
     beranda: {
       badge: 'Trusted Cybersecurity',
       title1: 'Protect Your Business',
       title2: 'From Digital Threats',
-      subtitle:
-        "VGuard is Indonesia's leading cybersecurity solution for SMBs and enterprises. 24/7 monitoring, realtime threat detection, and rapid response by our expert team.",
+      subtitle: "VGuard is Indonesia's leading cybersecurity solution for SMBs.",
       cta: 'View Pricing',
       ctaDemo: 'Try ROI Calculator',
       statsValue: ['500+', '99.9%', '< 5 Min', '24/7'],
       statsLabel: ['Active Clients', 'Service Uptime', 'Response Time', 'Monitoring'],
       featTitle: 'Everything You Need',
       features: [
-        {
-          icon: '🛡️',
-          title: 'Realtime Threat Detection',
-          desc: 'Our AI system monitors your network every second and detects threats before they cause damage.',
-        },
-        {
-          icon: '📊',
-          title: 'Centralized Dashboard',
-          desc: 'Monitor all your digital assets from one intuitive and easy-to-use dashboard.',
-        },
-        {
-          icon: '⚡',
-          title: 'Rapid Incident Response',
-          desc: 'Our expert team is ready to respond to security incidents in minutes, not hours.',
-        },
-        {
-          icon: '📋',
-          title: 'Comprehensive Reports',
-          desc: 'Get regular security reports that are clear and immediately actionable.',
-        },
-        {
-          icon: '🔒',
-          title: 'Regulatory Compliance',
-          desc: 'We ensure your systems meet the security standards and regulations applicable in Indonesia.',
-        },
-        {
-          icon: '🤝',
-          title: 'Dedicated Support',
-          desc: 'Our support team is ready to help you anytime through various communication channels.',
-        },
+        { icon: '🛡️', title: 'Realtime Threat Detection', desc: 'AI monitors your network every second.' },
+        { icon: '📊', title: 'Centralized Dashboard', desc: 'Monitor assets from one intuitive dashboard.' },
+        { icon: '⚡', title: 'Rapid Incident Response', desc: 'Expert team responds in minutes.' }
       ],
       cta2Title: 'Ready to Get Started?',
-      cta2Subtitle:
-        'Consult your business cybersecurity needs for free with our team of experts.',
+      cta2Subtitle: 'Consult your business cybersecurity needs for free.',
       cta2Btn: 'Free Consultation',
     },
     harga: {
       badge: 'Pricing',
       title: 'Choose the Right Plan',
-      subtitle:
-        'From personal to enterprise, we have a cybersecurity solution that fits your needs and budget.',
+      subtitle: 'Cybersecurity solutions that fit your budget.',
       perBulan: '/month',
       aktivasi: 'Activation fee',
-      popular: 'POPULAR',
+      popular: 'POPULER',
       hot: 'HOT',
       custom: 'Custom',
       enterprise: 'Contact us for a quote',
@@ -177,32 +117,17 @@ export const translations = {
       ctaPreOrder: 'Pre-Order Now',
       cta: 'Choose Plan',
       paymentTitle: 'Payment Information',
-      paymentDesc: 'Payment can be made via bank transfer or digital wallet.',
+      paymentDesc: 'Payment via bank transfer or digital wallet.',
       bank: 'BCA · Mandiri · BNI · OVO · GoPay',
       faqTitle: 'Frequently Asked Questions',
       faqs: [
-        {
-          q: 'Is there a free trial?',
-          a: 'Yes, we provide a 7-day free trial for all paid plans with no credit card required.',
-        },
-        {
-          q: 'Can I change plans anytime?',
-          a: 'Absolutely! You can upgrade or downgrade your plan at any time. Changes will take effect in the next billing period.',
-        },
-        {
-          q: 'What does the onboarding process look like?',
-          a: 'After payment is confirmed, our team will contact you within 24 hours for installation and configuration.',
-        },
-        {
-          q: 'Is my data secure?',
-          a: 'Your data security is our top priority. All data is encrypted and stored on secure servers in Indonesia.',
-        },
+        { q: 'Is there a free trial?', a: 'Yes, 7 days free trial.' }
       ],
     },
     roi: {
       badge: "ROI Calculator",
       title: "Calculate Your Potential Savings",
-      subtitle: "Simulate losses due to cashier fraud vs VGuard security investment.",
+      subtitle: "Simulate fraud losses vs VGuard investment.",
       inputTitle: "Business Parameters",
       resultTitle: "Estimated Analysis Results",
       labels: {
@@ -222,7 +147,7 @@ export const translations = {
       },
       bulan: "Months",
       ctaWA: "Consult Full Analysis",
-      disclaimer: "*These results are estimates based on industry average data."
+      disclaimer: "*Results are estimates based on industry average data."
     }
   },
 } as const;
