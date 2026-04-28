@@ -7,6 +7,12 @@ type Props = {
   activeTab: string;
 };
 
+type Feature = {
+  icon: string;
+  title: string;
+  desc: string;
+};
+
 export default function FeaturesSection({ activeTab }: Props) {
   const { t } = useLanguage();
 
@@ -15,16 +21,20 @@ export default function FeaturesSection({ activeTab }: Props) {
       case "produk":
         return (
           <div className="grid md:grid-cols-3 gap-6">
-            {t.beranda.features.map((f: any, i: number) => (
+            {t.beranda.features.map((f: Feature, i: number) => (
               <div
                 key={i}
-                className="p-6 bg-card rounded-xl border border-cyan-500/10 card-hover"
+                className="p-6 bg-[#070f1f] rounded-xl border border-cyan-500/10 hover:border-cyan-400/30 transition"
               >
                 <div className="text-2xl mb-2">{f.icon}</div>
+
                 <h3 className="text-lg font-semibold text-cyan-400">
                   {f.title}
                 </h3>
-                <p className="text-white/70 text-sm">{f.desc}</p>
+
+                <p className="text-white/70 text-sm mt-1">
+                  {f.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -63,7 +73,9 @@ export default function FeaturesSection({ activeTab }: Props) {
             <h1 className="text-4xl font-bold mb-2">
               {t.beranda.title1} <br /> {t.beranda.title2}
             </h1>
-            <p className="text-white/70">{t.beranda.subtitle}</p>
+            <p className="text-white/70 mt-2">
+              {t.beranda.subtitle}
+            </p>
           </div>
         );
     }
@@ -71,7 +83,6 @@ export default function FeaturesSection({ activeTab }: Props) {
 
   return (
     <section className="pt-28 px-4 max-w-7xl mx-auto">
-
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
@@ -83,7 +94,6 @@ export default function FeaturesSection({ activeTab }: Props) {
           {renderContent()}
         </motion.div>
       </AnimatePresence>
-
     </section>
   );
 }
