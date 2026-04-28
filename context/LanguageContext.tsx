@@ -6,6 +6,7 @@ import type { Lang } from '@/lib/translations';
 interface LanguageContextValue {
   lang: Lang;
   setLang: (lang: Lang) => void;
+  toggleLang: () => void; // Tambahan: Agar Navbar bisa memanggil fungsi ini
 }
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
@@ -13,8 +14,13 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Lang>('id');
 
+  // Tambahan: Logika untuk ganti bahasa id <-> en
+  const toggleLang = () => {
+    setLang((prev) => (prev === 'id' ? 'en' : 'id'));
+  };
+
   return (
-    <LanguageContext.Provider value={{ lang, setLang }}>
+    <LanguageContext.Provider value={{ lang, setLang, toggleLang }}>
       {children}
     </LanguageContext.Provider>
   );
