@@ -48,7 +48,6 @@ export const translations = {
         'Konsultasikan kebutuhan keamanan siber bisnis Anda secara gratis dengan tim ahli kami.',
       cta2Btn: 'Konsultasi Gratis',
     },
-
     harga: {
       badge: 'Pricing',
       title: 'Pilih Paket yang Tepat',
@@ -86,6 +85,32 @@ export const translations = {
         },
       ],
     },
+    // INI BAGIAN YANG TADI HILANG
+    roi: {
+      badge: "Kalkulator ROI",
+      title: "Hitung Potensi Penghematan Anda",
+      subtitle: "Simulasi kerugian akibat fraud kasir vs investasi keamanan VGuard.",
+      inputTitle: "Parameter Bisnis",
+      resultTitle: "Hasil Analisis Estimasi",
+      labels: {
+        kasir: "Jumlah Kasir",
+        transaksi: "Transaksi/Hari",
+        nilai: "Rata-rata Transaksi",
+        fraud: "Estimasi Fraud (%)",
+        paket: "Pilih Paket VGuard"
+      },
+      metrics: {
+        kerugianBulan: "Potensi Rugi/Bulan",
+        kerugianTahun: "Potensi Rugi/Tahun",
+        biayaVGuard: "Investasi VGuard",
+        penghematan: "Total Penghematan",
+        roi: "ROI Est.",
+        payback: "Payback Period"
+      },
+      bulan: "Bulan",
+      ctaWA: "Konsultasi Analisis Lengkap",
+      disclaimer: "*Hasil ini adalah estimasi berdasarkan data rata-rata industri."
+    }
   },
 
   en: {
@@ -94,7 +119,7 @@ export const translations = {
       title1: 'Protect Your Business',
       title2: 'From Digital Threats',
       subtitle:
-        'VGuard is Indonesia\'s leading cybersecurity solution for SMBs and enterprises. 24/7 monitoring, realtime threat detection, and rapid response by our expert team.',
+        "VGuard is Indonesia's leading cybersecurity solution for SMBs and enterprises. 24/7 monitoring, realtime threat detection, and rapid response by our expert team.",
       cta: 'View Pricing',
       ctaDemo: 'Try ROI Calculator',
       statsValue: ['500+', '99.9%', '< 5 Min', '24/7'],
@@ -137,7 +162,6 @@ export const translations = {
         'Consult your business cybersecurity needs for free with our team of experts.',
       cta2Btn: 'Free Consultation',
     },
-
     harga: {
       badge: 'Pricing',
       title: 'Choose the Right Plan',
@@ -175,6 +199,31 @@ export const translations = {
         },
       ],
     },
+    roi: {
+      badge: "ROI Calculator",
+      title: "Calculate Your Potential Savings",
+      subtitle: "Simulate losses due to cashier fraud vs VGuard security investment.",
+      inputTitle: "Business Parameters",
+      resultTitle: "Estimated Analysis Results",
+      labels: {
+        kasir: "Number of Cashiers",
+        transaksi: "Transactions/Day",
+        nilai: "Average Transaction Value",
+        fraud: "Estimated Fraud (%)",
+        paket: "Select VGuard Plan"
+      },
+      metrics: {
+        kerugianBulan: "Potential Loss/Month",
+        kerugianTahun: "Potential Loss/Year",
+        biayaVGuard: "VGuard Investment",
+        penghematan: "Total Savings",
+        roi: "Est. ROI",
+        payback: "Payback Period"
+      },
+      bulan: "Months",
+      ctaWA: "Consult Full Analysis",
+      disclaimer: "*These results are estimates based on industry average data."
+    }
   },
 } as const;
 
