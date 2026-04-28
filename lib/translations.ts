@@ -7,7 +7,8 @@ export const translations = {
       "harga": "Harga",
       "referral": "Referral",
       "investor": "Investor",
-      "kontak": "Kontak"
+      "kontak": "Kontak",
+      "adminPortal": "Admin Portal"
     },
     "beranda": {
       "badge": "Keamanan Siber Terpercaya",
@@ -116,7 +117,8 @@ export const translations = {
       "harga": "Pricing",
       "referral": "Referral",
       "investor": "Investor",
-      "kontak": "Contact"
+      "kontak": "Contact",
+      "adminPortal": "Admin Portal"
     },
     "beranda": {
       "badge": "Trusted Cyber Security",
