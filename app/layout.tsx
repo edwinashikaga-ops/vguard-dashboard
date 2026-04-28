@@ -3,18 +3,16 @@ import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { Syne, Space_Mono } from "next/font/google";
 
-// ✅ Font Syne (tidak wajib weight, tapi kita set biar konsisten)
 const syne = Syne({
   subsets: ["latin"],
   variable: "--font-syne",
   weight: ["400", "700"],
 });
 
-// ✅ FIX ERROR: Space Mono WAJIB weight
 const spaceMono = Space_Mono({
   subsets: ["latin"],
   variable: "--font-space-mono",
-  weight: ["400", "700"], // 🔥 ini yang tadi bikin error
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
