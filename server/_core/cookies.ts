@@ -39,7 +39,7 @@ export function getSessionCookieOptions(
         ? hostname
         : undefined;
 
-  return {
+  return { domain: undefined,
     domain,
     httpOnly: true,
     path: "/",
