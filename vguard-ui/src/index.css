@@ -1,0 +1,25 @@
+export default function Header() {
+  return (
+    <div style={{
+      display: "flex",
+      justifyContent: "flex-end",
+      padding: 10
+    }}>
+      <div style={{ display: "flex", gap: 10 }}>
+        
+        <button style={btn}>ID</button>
+        <button style={btn}>EN</button>
+
+      </div>
+    </div>
+  );
+}
+
+const btn = {
+  background: "#0f172a",
+  color: "white",
+  border: "1px solid #334155",
+  padding: "5px 10px",
+  borderRadius: 6,
+  cursor: "pointer"
+};

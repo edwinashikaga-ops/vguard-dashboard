@@ -1,0 +1,8 @@
+// test.js
+require('http')
+  .createServer((req, res) => {
+    res.end('OK');
+  })
+  .listen(5000, '127.0.0.1', () => {
+    console.log('TEST SERVER RUNNING 5000');
+  });

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VGuard Dashboard</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- CHART -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      margin:0;
+      font-family: 'Inter', sans-serif;
+      background: #0b1220;
+      color: white;
+    }
+
+    .container {
+      padding:20px;
+    }
+
+    .cards {
+      display:flex;
+      gap:20px;
+    }
+
+    .card {
+      flex:1;
+      padding:20px;
+      border-radius:12px;
+      background: linear-gradient(135deg,#1e293b,#0f172a);
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    }
+
+    h1 {
+      margin-bottom:20px;
+    }
+
+    canvas {
+      margin-top:30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>🚀 VGuard LIVE</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Total Event</h3>
+      <h2 id="total">0</h2>
+    </div>
+
+    <div class="card">
+      <h3>Last Event</h3>
+      <h2 id="last">-</h2>
+    </div>
+  </div>
+
+  <canvas id="chart"></canvas>
+</div>
+
+<script>
+let chart;
+let history = [];
+
+async function load(){
+  try {
+    const res = await fetch('http://localhost:3000/logs');
+    const data = await res.json();
+
+    document.getElementById('total').innerText = data.length;
+
+    if(data.length > 0){
+      document.getElementById('last').innerText =
+        data[data.length-1].type || 'EVENT';
+    }
+
+    // update chart
+    history.push(data.length);
+    if(history.length > 20) history.shift();
+
+    if(!chart){
+      const ctx = document.getElementById('chart');
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: history.map((_,i)=>i),
+          datasets: [{
+            label: 'Activity',
+            data: history
+          }]
+        }
+      });
+    } else {
+      chart.data.labels = history.map((_,i)=>i);
+      chart.data.datasets[0].data = history;
+      chart.update();
+    }
+
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+load();
+setInterval(load,1000);
+</script>
+
+</body>
+</html>
