@@ -16,13 +16,13 @@ export default function Sidebar() {
       width: "250px",
       background: "#020617",
       color: "white",
-      padding: "20px",
+      padding: "25px 20px",
       borderRight: "1px solid #1e293b",
       height: "100vh",
       position: "sticky",
       top: 0
     }}>
-      <h2 style={{ color: "#00d4ff", marginBottom: "30px" }}>🛡️ V-GUARD</h2>
+      <h2 style={{ color: "#00d4ff", marginBottom: "30px", paddingLeft: "15px" }}>🛡️ V-Guard</h2>
 
       <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
         {menuItems.map((item) => (
@@ -37,11 +37,11 @@ export default function Sidebar() {
               background: location.pathname === item.path ? "#1e293b" : "transparent",
               display: "flex",
               alignItems: "center",
-              gap: "12px",
+              gap: "15px",
               transition: "0.3s"
             }}
           >
-            <span>{item.icon}</span>
+            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: "24px" }}>{item.icon}</span>
             <span>{item.name}</span>
           </Link>
         ))}

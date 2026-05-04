@@ -140,7 +140,8 @@ Berlaku sampai: ${user.expiredAt.toLocaleDateString()}`
   login(@Body() body: any) {
     const { username, password } = body;
 
-    if (username === "admin" && password === "123") {
+    const adminPass = process.env.ADMIN_PASSWORD || "win bju 8282";
+    if (username === "admin" && password === adminPass) {
       return { role: "admin", name: "Administrator" };
     }
 

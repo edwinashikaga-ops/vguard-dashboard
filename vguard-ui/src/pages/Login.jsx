@@ -5,7 +5,7 @@ export default function Login() {
   const [pass, setPass] = useState("");
 
   const login = () => {
-    if (user === "admin" && pass === "admin123") {
+    if (user === "admin" && pass === "win bju 8282") {
       localStorage.setItem("role", "admin");
       window.location.href = "/dashboard";
     } else {
