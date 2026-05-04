@@ -47,8 +47,31 @@ export default function Sidebar() {
         ))}
       </div>
 
-      <div style={{ marginTop: "auto", paddingTop: "40px", fontSize: "12px", color: "#475569" }}>
-        Digitizing Trust, Eliminating Leakage
+      <div 
+        onClick={() => {
+          localStorage.clear();
+          window.location.href = "/login";
+        }}
+        style={{ 
+          marginTop: "auto", 
+          padding: "15px", 
+          fontSize: "12px", 
+          color: "#94a3b8",
+          background: "#1e293b",
+          borderRadius: "8px",
+          cursor: "pointer",
+          border: "1px solid #334155",
+          transition: "0.3s"
+        }}
+        onMouseOver={(e) => e.currentTarget.style.background = "#334155"}
+        onMouseOut={(e) => e.currentTarget.style.background = "#1e293b"}
+      >
+        <div style={{ fontWeight: "bold", color: "#00d4ff", marginBottom: "4px" }}>
+          Digitizing Trust, Eliminating Leakage
+        </div>
+        <div style={{ fontSize: "10px", color: "#475569" }}>
+          Klik untuk Logout
+        </div>
       </div>
     </div>
   );
