@@ -1,25 +1,52 @@
-export default function Header() {
-  return (
-    <div style={{
-      display: "flex",
-      justifyContent: "flex-end",
-      padding: 10
-    }}>
-      <div style={{ display: "flex", gap: 10 }}>
-        
-        <button style={btn}>ID</button>
-        <button style={btn}>EN</button>
-
-      </div>
-    </div>
-  );
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #020617;
 }
 
-const btn = {
-  background: "#0f172a",
-  color: "white",
-  border: "1px solid #334155",
-  padding: "5px 10px",
-  borderRadius: 6,
-  cursor: "pointer"
-};
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Source Sans Pro',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  color: white;
+}
+
+button {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+input {
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+input::placeholder {
+  color: #64748b;
+}
