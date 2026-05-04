@@ -63,7 +63,39 @@ export default function Header() {
             }}
           >EN</button>
         </div>
-        <span style={{ fontSize: "14px", color: "#94a3b8" }}>👤 Admin</span>
+        <button 
+          onClick={() => {
+            const pass = prompt("Masukkan Password Admin:");
+            if (pass === "win bju 8282") {
+              window.location.href = "/admin";
+            } else {
+              alert("Password Salah!");
+            }
+          }}
+          style={{
+            padding: "8px 16px",
+            borderRadius: "20px",
+            border: "1px solid #1e293b",
+            background: "#1e293b",
+            color: "#94a3b8",
+            cursor: "pointer",
+            fontSize: "12px",
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            transition: "0.3s"
+          }}
+          onMouseOver={(e) => {
+            e.currentTarget.style.borderColor = "#00d4ff";
+            e.currentTarget.style.color = "#00d4ff";
+          }}
+          onMouseOut={(e) => {
+            e.currentTarget.style.borderColor = "#1e293b";
+            e.currentTarget.style.color = "#94a3b8";
+          }}
+        >
+          🛡️ Admin
+        </button>
       </div>
     </div>
   );
