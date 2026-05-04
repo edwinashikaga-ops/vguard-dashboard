@@ -57,7 +57,7 @@ export default function Dashboard() {
   return (
     <div style={{ padding: 20, color: "white" }}>
       <div style={{ marginBottom: "30px" }}>
-        <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "white" }}>Selamat Datang, Founder V-Guard</h2>
+        <h2 style={{ fontSize: "24px", fontWeight: "bold", color: "white" }}>V-Guard: Digitizing Trust, Eliminating Leakage</h2>
         <p style={{ color: "#94a3b8", marginTop: "5px" }}>Sistem pemantauan bisnis Anda berjalan normal.</p>
       </div>
 

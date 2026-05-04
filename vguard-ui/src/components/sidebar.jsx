@@ -48,7 +48,7 @@ export default function Sidebar() {
       </div>
 
       <div style={{ marginTop: "auto", paddingTop: "40px", fontSize: "12px", color: "#475569" }}>
-        © 2026 V-Guard System
+        Digitizing Trust, Eliminating Leakage
       </div>
     </div>
   );
