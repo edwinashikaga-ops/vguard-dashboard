@@ -16,4 +16,4 @@ async function bootstrap() {
   await app.listen(8888, '127.0.0.1');
   console.log('🚀 VGuard + Scheduler + API Ready on 8888');
 }
-bootstrap();
+bootstrap();// Final check before investor demo
